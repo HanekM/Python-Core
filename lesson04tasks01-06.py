@@ -73,4 +73,20 @@ while i != -1:
     print(parseToStr[i], end="")
     i -= 1
 
+# 6 Вгадати випадкове число 1-100 за 10 спроб
+import random
+rand = random.randint(1,100)
+count = 0
+for count in range(10):
+    user_ans = int(input("Enter int: "))
+    if rand > user_ans:
+        print("Random number is bigger")
+    elif rand < user_ans:
+        print("Random number is smaller")
+    elif rand == user_ans:
+        print("Congratulations! You are right!")
+        break
+        
+
+
     
