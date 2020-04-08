@@ -87,6 +87,83 @@ for count in range(10):
         print("Congratulations! You are right!")
         break
         
+# 7. User input 10 int numbers, estimate amount of numbers % 5 == 0 
+count = 0
 
+for i in range(10):
+    user_int = int(input("Enter number: " ))
+    if user_int % 5 == 0 :
+        count += 1 
+        
+print("Count =", count )
 
+# 7. Вивести таблицю множення 2 до 9
+for i in range(2,10):
+    for j in range(2,10):
+        print("", i, "*", j, "=", i*j, "|", end="")
+    print("\n")
+
+# 8. Вивести прямокутник з 2х видiв символiв
+for i in range(1,10):
+    for j in range(1,10):
+        if (i==1 or i == 9) or (j==1 or j==9):
+            print("#", end="")
+        else:
+            print("$", end="")
+        
+    print("\n")
+
+# 9. Дано числа Р і Н. Користувач вводить послідовність чисел. Визначити суму чисел
+# що менші за Р, добуток чисел, що менші за Н, кількість чисел в діапазоні Р до Н
+# при введені числа рівного Р чи Н призупинити програму
+user_numb = 1
+p = int(input("Enter p: "))
+h = int(input("Enter h: "))
+
+if (p>h):
+    p,h = h,p
+
+suma = 0
+mult = 1
+count = 0 
+
+while ( user_numb != 'q' or user_numb != p or user_numb != h ):
+    user_numb = int(input("Enter numbers: "))
+    if user_numb < p :
+        suma += user_numb
+    elif user_numb > h:
+        mult *= user_numb
+    elif (user_numb>p and user_numb < h):
+        count += 1 
+    elif user_numb==p or user_numb == h:
+        break
+
+print("Suma  =", suma)
+print("Mult  =", mult)
+print("Count =", count)
+
+# 10. Для чисел, що вводяться користувачем визначити відсоток відємних і додатніх чисел
+# якщо число 0, то припинити програму
+
+count_positive = 0
+count_negative = 0
+count = 0
+user_numb = 1
+while user_numb != 0 :
+    user_numb = float(input("Enter number: "))
     
+    if user_numb < 0 :
+        count_negative += 1
+        count += 1
+    elif user_numb > 0 :
+        count_positive += 1
+        count += 1
+    elif user_numb == 0:
+        print("Exiting...")
+        break
+    
+print("Count = %d" % (count) )   
+print("Percentage of negative: %.2f %%." % (count_negative/count) )
+print("Percentage of positive: %.2f %%." % (count_negative/count) )
+
+
