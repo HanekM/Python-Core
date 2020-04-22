@@ -47,5 +47,31 @@ elif user_func == 'delete':
         school.pop(class_to_delete)
 print(sorted(school.items()))
 
+# 5
+synonyms = {'vocabulary': ['glossary', 'dictionary', 'terminology'], \
+    'context': ['background', 'conditions', 'connection', 'lexicon'], \
+    'dialect': ['accent', 'language', 'localism', 'jargon'], \
+    'diction': ['delivery', 'eloquence', 'expression', 'elocution']
+}
+
+keyword = input("Enter keyword: ")
+
+if keyword in synonyms.keys():
+    print("Synonyms are ", end="")
+    for i in synonyms[keyword]:
+        print(i, ", ", end="")
+    print("\n")    
+elif keyword not in synonyms.keys():
+    print("There arent word '" + keyword + "' in a dictionary")
+    
+user_sentense = input("Enter sentense: ")
+sentense_list = list(user_sentense.split())
+print(sentense_list)
+
+for i in sentense_list:
+    if i in synonyms.keys():
+        print(synonyms[i])
+    else:
+        print(i, "", end="")
 
 
