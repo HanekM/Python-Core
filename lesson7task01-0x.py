@@ -1,24 +1,24 @@
-# 1 
+# 1 ################################
 dictionary = {}
 for i in range(10):
     dictionary[i] = str(i)
 print(dictionary)
 
-# 2  
+# 2  ################################
 country_cities = {'england':'london', 'france':'paris', 'italy':'rome'}
 user_city = input("Enter city: ")
 for key in country_cities:
     if user_city.lower() in country_cities[key]:
         print(key.title() + ": " + country_cities[key].title())
         
-# 3 Vocabulary
+# 3 ################################
 en_ukr = {'python':'пiтон', 'is':'це', 'the best':'найкраща', 'language':'мова'}
 ukr_en = {}
 for key,value in en_ukr.items():
     ukr_en[value] = key 
 print(ukr_en)
 
-# 4
+# 4 ################################
 school = {'1a': 30,'1b':28,'2a':27, '2b':31, '3a':30, '3b':31, '4a': 25, '4b': 24 }
 total = 0
 for key, value in school.items():
@@ -47,7 +47,7 @@ elif user_func == 'delete':
         school.pop(class_to_delete)
 print(sorted(school.items()))
 
-# 5
+# 5 ################################
 synonyms = {'vocabulary': ['glossary', 'dictionary', 'terminology'], \
     'context': ['background', 'conditions', 'connection', 'lexicon'], \
     'dialect': ['accent', 'language', 'localism', 'jargon'], \
@@ -73,5 +73,21 @@ for i in sentense_list:
         print(synonyms[i])
     else:
         print(i, "", end="")
+        
+# 6 ################################
+user_sentense = input("Enter sentense: ")
+sentense_dict = {}
 
+sentense_list = list(user_sentense.split())
+
+print(sentense_list)
+
+for i in sentense_list:
+    if i not in sentense_dict:
+        sentense_dict.update( {i: 1} )
+        
+    elif i in sentense_dict:
+        sentense_dict[i] += 1
+
+print(sentense_dict)
 
