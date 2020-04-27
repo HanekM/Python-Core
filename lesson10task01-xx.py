@@ -54,17 +54,17 @@ class Door():
             self.status = 'open'
             
 door1 = Door(1,'closed')
-print(door1.status)
+print(door1.status) # closed
 door1.toggle()
-print(door1.status)
+print(door1.status) # open
 
-print(door1.colour)
+print(door1.colour) #blue
 door1.colour = 'red'
-print(door1.colour)
+print(door1.colour) #red
 
-print(Door.colour)
+print(Door.colour) #blue
 Door.colour = 'red'
-print(Door.colour)
+print(Door.colour) #red
 Door.paint('white')
-print(Door.colour)
+print(Door.colour) #white
 
