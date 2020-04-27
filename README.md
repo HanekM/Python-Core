@@ -1,4 +1,4 @@
-# Python_Core
+Python_Core
 SoftServe Python_core
 Course of SoftServe IT academy (March - May 2020)
 
