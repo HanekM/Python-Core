@@ -3,6 +3,7 @@
 # unflexible and hard to scale up 
 
 
+
 from  tkinter import *
 
 # scan active checkbuttons and create global tuple with ones and zeros 
